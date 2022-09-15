@@ -29,7 +29,7 @@ Added a couple of new moves along  with some stat tweaks to help make Ridley fee
 - landing down now has cancel-frames (faf:38->29)
 - landing forward now has cancel-frames (faf:34->28)
 - added hit-box to wall and ceiling bonk
-- bouncing off a wall no longer puts Ridley into special, but each consecutive bounce without touching the ground only goes half as high
+- bouncing off a wall no longer puts Ridley into special-fall, but each consecutive bounce without touching the ground only goes half as high
 ### Side-Special
 - landing lag is now dependant on how far into the move Ridley was before landing (the later Ridley lands, the less landing-lag)
 - increased size of grab-box to better match animation/effects
