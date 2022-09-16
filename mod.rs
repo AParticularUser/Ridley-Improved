@@ -318,8 +318,8 @@ unsafe fn down_special_pogo_game(fighter : &mut L2CAgentBase) {
     frame(fighter.lua_state_agent, 33.0);
     FT_MOTION_RATE(fighter, 1.0);
     if is_excute(fighter) {
-        ATTACK(fighter, 1, 0, Hash40::new("tail8"), 21.0, 305, 70, 0, 40, 3.0, 8.0, 0.0, 0.0, None, None, None, 1.0, 1.0, *ATTACK_SETOFF_KIND_ON, *ATTACK_LR_CHECK_F, false, 0, 0.0, 0, false, false, false, false, true, *COLLISION_SITUATION_MASK_GA, *COLLISION_CATEGORY_MASK_ALL, *COLLISION_PART_MASK_ALL, false, Hash40::new("collision_attr_sting"), *ATTACK_SOUND_LEVEL_L, *COLLISION_SOUND_ATTR_CUTUP, *ATTACK_REGION_TAIL);
-        ATTACK(fighter, 2, 0, Hash40::new("tail8"), 21.0, 305, 70, 0, 40, 3.5, 4.0, 0.0, 0.0, None, None, None, 1.0, 1.0, *ATTACK_SETOFF_KIND_ON, *ATTACK_LR_CHECK_F, false, 0, 0.0, 0, false, false, false, false, true, *COLLISION_SITUATION_MASK_GA, *COLLISION_CATEGORY_MASK_ALL, *COLLISION_PART_MASK_ALL, false, Hash40::new("collision_attr_sting"), *ATTACK_SOUND_LEVEL_L, *COLLISION_SOUND_ATTR_CUTUP, *ATTACK_REGION_TAIL);
+        ATTACK(fighter, 1, 0, Hash40::new("tail8"), 21.0, 305, 70, 0, 40, 3.0, 8.0, 0.0, 0.0, None, None, None, 1.0, 1.0, *ATTACK_SETOFF_KIND_ON, *ATTACK_LR_CHECK_F, false, 0, 8.0, 0, false, false, false, false, true, *COLLISION_SITUATION_MASK_GA, *COLLISION_CATEGORY_MASK_ALL, *COLLISION_PART_MASK_ALL, false, Hash40::new("collision_attr_sting"), *ATTACK_SOUND_LEVEL_L, *COLLISION_SOUND_ATTR_CUTUP, *ATTACK_REGION_TAIL);
+        ATTACK(fighter, 2, 0, Hash40::new("tail8"), 21.0, 305, 70, 0, 40, 3.5, 4.0, 0.0, 0.0, None, None, None, 1.0, 1.0, *ATTACK_SETOFF_KIND_ON, *ATTACK_LR_CHECK_F, false, 0, 8.0, 0, false, false, false, false, true, *COLLISION_SITUATION_MASK_GA, *COLLISION_CATEGORY_MASK_ALL, *COLLISION_PART_MASK_ALL, false, Hash40::new("collision_attr_sting"), *ATTACK_SOUND_LEVEL_L, *COLLISION_SOUND_ATTR_CUTUP, *ATTACK_REGION_TAIL);
         ATTACK(fighter, 3, 0, Hash40::new("tail7"), 12.0, 361, 70, 0, 70, 3.5, 2.0, 0.0, 0.0, None, None, None, 1.0, 1.0, *ATTACK_SETOFF_KIND_ON, *ATTACK_LR_CHECK_F, false, 0, 0.0, 0, false, false, false, false, true, *COLLISION_SITUATION_MASK_GA, *COLLISION_CATEGORY_MASK_ALL, *COLLISION_PART_MASK_ALL, false, Hash40::new("collision_attr_normal"), *ATTACK_SOUND_LEVEL_M, *COLLISION_SOUND_ATTR_KICK, *ATTACK_REGION_TAIL);
         ATTACK(fighter, 4, 0, Hash40::new("tail5"), 5.0, 361, 70, 0, 70, 3.5, 1.0, 0.0, 0.0, None, None, None, 1.0, 1.0, *ATTACK_SETOFF_KIND_ON, *ATTACK_LR_CHECK_POS, false, 0, 0.0, 0, false, false, false, false, true, *COLLISION_SITUATION_MASK_GA, *COLLISION_CATEGORY_MASK_ALL, *COLLISION_PART_MASK_ALL, false, Hash40::new("collision_attr_normal"), *ATTACK_SOUND_LEVEL_S, *COLLISION_SOUND_ATTR_KICK, *ATTACK_REGION_TAIL);
         ATTACK(fighter, 5, 0, Hash40::new("tail3"), 5.0, 361, 70, 0, 70, 4.0, 0.0, 0.0, 0.0, None, None, None, 1.0, 1.0, *ATTACK_SETOFF_KIND_ON, *ATTACK_LR_CHECK_POS, false, 0, 0.0, 0, false, false, false, false, true, *COLLISION_SITUATION_MASK_GA, *COLLISION_CATEGORY_MASK_ALL, *COLLISION_PART_MASK_ALL, false, Hash40::new("collision_attr_normal"), *ATTACK_SOUND_LEVEL_S, *COLLISION_SOUND_ATTR_KICK, *ATTACK_REGION_TAIL);
@@ -377,7 +377,7 @@ unsafe fn down_special_pogo_eff(fighter : &mut L2CAgentBase) {
     frame(fighter.lua_state_agent, 29.0);
     if is_excute(fighter) {
         EFFECT_FOLLOW(fighter, Hash40::new("ridley_death_stab_flare"), Hash40::new("tail8"), 0, 0, 0, 0, 180, 0, 1, true);
-        EFFECT_FOLLOW(fighter, Hash40::new("ridley_death_stab_line"), Hash40::new("top"), 0, -2, -11, 55, 0, 0, 0.9, true);
+        EFFECT_FOLLOW(fighter, Hash40::new("ridley_death_stab_line"), Hash40::new("top"), 0, -7, -8, 60, 0, 0, 0.9, true);
     }
     frame(fighter.lua_state_agent, 33.0);
     if is_excute(fighter) {
@@ -452,7 +452,7 @@ unsafe fn air_grab_status_main(fighter: &mut L2CFighterCommon) -> L2CValue {
 #[acmd_script( agent = "ridley", script = "game_attackairlw", category = ACMD_GAME )]
 unsafe fn down_air_game(fighter : &mut L2CAgentBase) {
     frame(fighter.lua_state_agent, 1.0);
-    FT_MOTION_RATE(fighter, 0.75);
+    FT_MOTION_RATE(fighter, 0.5);
     frame(fighter.lua_state_agent, 17.0);
     if macros::is_excute(fighter) {
         WorkModule::on_flag(fighter.module_accessor, *FIGHTER_STATUS_ATTACK_AIR_FLAG_ENABLE_LANDING);
@@ -460,7 +460,6 @@ unsafe fn down_air_game(fighter : &mut L2CAgentBase) {
     frame(fighter.lua_state_agent, 19.0);
     FT_MOTION_RATE(fighter, 1.0);
     frame(fighter.lua_state_agent, 20.0);
-    FT_MOTION_RATE(fighter, 0.66);
     if is_excute(fighter) {
         ATTACK(fighter, 2, 0, Hash40::new("tail8"), 14.0, 361, 65, 0, 60, 5.0, 5.0, 0.0, 0.0, None, None, None, 1.0, 1.0, *ATTACK_SETOFF_KIND_ON, *ATTACK_LR_CHECK_F, false, 0, 0.0, 0, false, false, false, false, true, *COLLISION_SITUATION_MASK_GA, *COLLISION_CATEGORY_MASK_ALL, *COLLISION_PART_MASK_ALL, false, Hash40::new("collision_attr_cutup"), *ATTACK_SOUND_LEVEL_M, *COLLISION_SOUND_ATTR_CUTUP, *ATTACK_REGION_TAIL);
         ATTACK(fighter, 1, 0, Hash40::new("tail7"), 12.0, 361, 55, 0, 60, 5.0, -1.0, 0.0, 0.0, None, None, None, 1.0, 1.0, *ATTACK_SETOFF_KIND_ON, *ATTACK_LR_CHECK_F, false, 0, 0.0, 0, false, false, false, false, true, *COLLISION_SITUATION_MASK_GA, *COLLISION_CATEGORY_MASK_ALL, *COLLISION_PART_MASK_ALL, false, Hash40::new("collision_attr_normal"), *ATTACK_SOUND_LEVEL_S, *COLLISION_SOUND_ATTR_KICK, *ATTACK_REGION_TAIL);
@@ -468,25 +467,26 @@ unsafe fn down_air_game(fighter : &mut L2CAgentBase) {
         // HIT_NODE(fighter, Hash40::new("tail1"), *HIT_STATUS_XLU);
         // HIT_NODE(fighter, Hash40::new("tail3"), *HIT_STATUS_XLU);
     }
-    frame(fighter.lua_state_agent, 22.0);
-    FT_MOTION_RATE(fighter, 0.5);
+    frame(fighter.lua_state_agent, 23.0);
     if is_excute(fighter) {
         AttackModule::clear(fighter.module_accessor, 0, false);
     }
     frame(fighter.lua_state_agent, 25.0);
-    FT_MOTION_RATE(fighter, 0.66);
-    frame(fighter.lua_state_agent, 28.0);
-    FT_MOTION_RATE(fighter, 1.0);
+    FT_MOTION_RATE(fighter, 2.0);
     if is_excute(fighter) {
         // HIT_NODE(fighter, Hash40::new("tail1"), *HIT_STATUS_NORMAL);
         // HIT_NODE(fighter, Hash40::new("tail3"), *HIT_STATUS_NORMAL);
         AttackModule::clear_all(fighter.module_accessor);
     }
-    frame(fighter.lua_state_agent, 45.0);
+    // frame(fighter.lua_state_agent, 26.0);
+    // FT_MOTION_RATE(fighter, 2.0);
+    frame(fighter.lua_state_agent, 31.0);
+    FT_MOTION_RATE(fighter, 1.0);
+    frame(fighter.lua_state_agent, 40.0);
     if macros::is_excute(fighter) {
         WorkModule::off_flag(fighter.module_accessor, *FIGHTER_STATUS_ATTACK_AIR_FLAG_ENABLE_LANDING);
     }
-    frame(fighter.lua_state_agent, 54.0);
+    frame(fighter.lua_state_agent, 50.0);
     if macros::is_excute(fighter) {
         notify_event_msc_cmd!(fighter, Hash40::new_raw(0x2127e37c07), *GROUND_CLIFF_CHECK_KIND_ALWAYS_BOTH_SIDES);
     }
@@ -513,7 +513,7 @@ unsafe fn down_air_snd(fighter : &mut L2CAgentBase) {
 unsafe fn down_air_eff(fighter : &mut L2CAgentBase) {
     frame(fighter.lua_state_agent, 19.0);
     if is_excute(fighter) {
-        EFFECT_FOLLOW(fighter, Hash40::new("ridley_tail_arc"), Hash40::new("top"), 0, 12, -5, 0, -45, 90, 1, true);
+        EFFECT_FOLLOW(fighter, Hash40::new("ridley_tail_arc"), Hash40::new("top"), 0, 12, -5, 0, -60, 90, 1, true);
         LAST_EFFECT_SET_RATE(fighter, 0.7);
     }
 }
@@ -1228,8 +1228,8 @@ unsafe fn up_throw_game(fighter: &mut L2CAgentBase) {
     }
     frame(fighter.lua_state_agent, 14.0);
     if is_excute(fighter) {
-        ATTACK(fighter, 0, 0, Hash40::new("tail8"), 8.0, 89, 100, 0, 55, 4.5, 5.0, 0.0, 0.0, None, None, None, 0.0, 1.0, *ATTACK_SETOFF_KIND_OFF, *ATTACK_LR_CHECK_F, false, 0, 0.0, 0, false, false, false, false, true, *COLLISION_SITUATION_MASK_GA, *COLLISION_CATEGORY_MASK_ALL, *COLLISION_PART_MASK_ALL,   false, Hash40::new("collision_attr_sting"), *ATTACK_SOUND_LEVEL_M, *COLLISION_SOUND_ATTR_CUTUP, *ATTACK_REGION_TAIL);
-        ATTACK(fighter, 1, 0, Hash40::new("tail8"), 8.0, 89, 100, 0, 55, 4.5, -2.0, 1.0, 1.0, None, None, None, 0.0, 1.0, *ATTACK_SETOFF_KIND_OFF, *ATTACK_LR_CHECK_F, false, 0, 0.0, 0, false, false, false, false, true, *COLLISION_SITUATION_MASK_GA, *COLLISION_CATEGORY_MASK_ALL, *COLLISION_PART_MASK_ALL, false, Hash40::new("collision_attr_sting"), *ATTACK_SOUND_LEVEL_M, *COLLISION_SOUND_ATTR_CUTUP, *ATTACK_REGION_TAIL);
+        ATTACK(fighter, 0, 0, Hash40::new("tail8"), 8.0, 89, 100, 0, 55, 4.5, 5.0, 0.0, 0.0, None, None, None, 0.1, 1.0, *ATTACK_SETOFF_KIND_OFF, *ATTACK_LR_CHECK_F, false, 0, 0.0, 0, false, false, false, false, true, *COLLISION_SITUATION_MASK_GA, *COLLISION_CATEGORY_MASK_ALL, *COLLISION_PART_MASK_ALL,   false, Hash40::new("collision_attr_sting"), *ATTACK_SOUND_LEVEL_M, *COLLISION_SOUND_ATTR_CUTUP, *ATTACK_REGION_TAIL);
+        ATTACK(fighter, 1, 0, Hash40::new("tail8"), 8.0, 89, 100, 0, 55, 4.5, -2.0, 1.0, 1.0, None, None, None, 0.1, 1.0, *ATTACK_SETOFF_KIND_OFF, *ATTACK_LR_CHECK_F, false, 0, 0.0, 0, false, false, false, false, true, *COLLISION_SITUATION_MASK_GA, *COLLISION_CATEGORY_MASK_ALL, *COLLISION_PART_MASK_ALL, false, Hash40::new("collision_attr_sting"), *ATTACK_SOUND_LEVEL_M, *COLLISION_SOUND_ATTR_CUTUP, *ATTACK_REGION_TAIL);
         AttackModule::set_catch_only_all(fighter.module_accessor, true, false);
     }
     wait(fighter.lua_state_agent, 2.0);
