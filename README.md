@@ -1,5 +1,5 @@
 # Ridley-Improved
-Added a couple of new moves along  with some stat tweaks to help make Ridley feel more like he does in Metroid.
+This mod aims to help make Ridley feel more like he does in Metroid by adding a new down-air and aerial down-special, pogo tail stab, along with some stat tweaks, and other technical changes.
 ## Changes
 
 #### Increased max jumps 3->4
