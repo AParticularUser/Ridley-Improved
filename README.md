@@ -18,6 +18,12 @@ This mod aims to help make Ridley feel more like he does in Metroid by adding a 
 ### Down-Air
 - Ridley now does a tail swat instead of a "stall and fall"
 - the tip of the tail does more damage and knockback
+### Forward-Air
+- increased hit-stun for f-air 1 and 2 to enable drag-down combos
+### Back-Air
+- changed animation to look less anthropomophic
+### Forward-Tilt
+- changed animation so Ridley no longer holds his tail
 ### Neutral-Special
 - Reduced start up
 - reduced end lag of the failure state (faf:56->30)
@@ -28,6 +34,7 @@ This mod aims to help make Ridley feel more like he does in Metroid by adding a 
 - Reduced start up
 - landing down now has cancel-frames (faf:38->29)
 - landing forward now has cancel-frames (faf:34->28)
+- Ridley will consistantly perform a wall-bounce when coliding with a wall
 - added hit-box to wall and ceiling bonk
 - bouncing off a wall no longer puts Ridley into special-fall, but each consecutive bounce without touching the ground only goes half as high
 ### Side-Special
@@ -35,10 +42,10 @@ This mod aims to help make Ridley feel more like he does in Metroid by adding a 
 - increased size of grab-box to better match animation/effects
 - holding attack/special durring the drag will make Ridley do his ledge throw early
 - decreased ledge-throw kill power: kbg:90->55, bkb:75->85
-### Taunts
-- Ridley extends his neck further up during down-taunt
-- added wind-boxes to up-taunt
 ### Throws
 Up-throw now kills before down-throw
 - up-throw: increased kbg: 120->125
 - down-throw: decressed kbg: 115->90, increased bkb: 40->55
+### Taunts
+- Ridley extends his neck further up during down-taunt
+- added wind-boxes to up-taunt
