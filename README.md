@@ -3,7 +3,7 @@ This mod aims to help make Ridley feel more like he does in Metroid by adding a 
 ## Changes
 
 #### Increased max jumps 3->4
-#### Increased weight 107->120
+#### Increased weight 107->115
 #### Added screen shake effects to aerial-landings, heavy-landing, and down-smash
 
 ### Down-Specail
@@ -28,7 +28,6 @@ This mod aims to help make Ridley feel more like he does in Metroid by adding a 
 - Reduced start up
 - reduced end lag of the failure state (faf:56->30)
 - added intangablity to "head" and "mouth1" hurt-boxes while charging
-- increased size of weak-point hurt-box (1->1.25)
 - holding attack after fully charging plasma-breath will make Ridley release a large explosion (like f-smash) instead of shooting fire balls
 ### Up-Special
 - Reduced start up
