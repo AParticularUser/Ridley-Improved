@@ -1,20 +1,22 @@
 # Ridley-Improved
-This mod aims to help make Ridley feel more like he does in Metroid by adding a new down-air and aerial down-special, pogo tail stab, along with some stat tweaks, and other technical changes.
+This mod aims to help make Ridley feel more like he does in Metroid by adding a new down-air and down-special, pogo tail stab, along with some stat tweaks, and other technical changes.
 ## Changes
 
 #### Increased max jumps 3->4
 #### Increased weight 107->115
 #### Added screen shake effects to aerial-landings, heavy-landing, and down-smash
 
-### Down-Specail
+### Down-Special
+#### Added new down-special: pogo stab
+- if the tail hits the ground or an opponent, Ridley will bounce upward relative to the distance from the ground
+- the tip of the tail does more damage and spikes
+### Moved Skewer to Shield-Special
+#### Pressing shield and special together will make Ridley do the vanilla version of down-special, Skewer
+- hold special to delay the attack
+- hold the opposite direction to turn around right before the attack
 - increased bonus shield-damage: -37->-20
 - increased shield-stun multiplier: 0.2->0.4
 - if an opponent is airborn when released they will be put into the foot-stooled state intead of being launched
-#### Added new aerial down-special: pogo stab
-- if the tail hits the ground or an opponent, Ridley will bounce upward relative to the distance from the ground
-- the tip of the tail does more damage and spikes
-### Added z-air/air-grab
-- pressing grab in the air will make Ridley do the aerial version of grounded down-special
 ### Down-Air
 - Ridley now does a tail swat instead of a "stall and fall"
 - the tip of the tail does more damage and knockback
@@ -25,10 +27,9 @@ This mod aims to help make Ridley feel more like he does in Metroid by adding a 
 ### Forward-Tilt
 - changed animation so Ridley no longer holds his tail
 ### Neutral-Special
-- Reduced start up
 - reduced end lag of the failure state (faf:56->30)
-- added intangablity to "head" and "mouth1" hurt-boxes while charging
-- holding attack after fully charging plasma-breath will make Ridley release a large explosion (like f-smash) instead of shooting fire balls
+- made it easier to hit the weak-spot while charging by adding intangablity to "head" and "mouth1" hurt-boxes 
+- pressing attack while charging plasma-breath will make Ridley release a large explosion with the power being relative to the charge level
 ### Up-Special
 - Reduced start up
 - landing down now has cancel-frames (faf:38->29)
